@@ -13,85 +13,89 @@
         
         .portal-card {
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
         }
         .portal-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: var(--theme-color);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px var(--shadow-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px var(--shadow-color);
         }
         
         /* สีกำกับแต่ละหมวด */
-        .theme-mom { --theme-color: #fca5a5; --shadow-color: rgba(252, 165, 165, 0.1); }
-        .theme-exec { --theme-color: #c5a059; --shadow-color: rgba(197, 160, 89, 0.1); }
-        .theme-ludus { --theme-color: #bc13fe; --shadow-color: rgba(188, 19, 254, 0.1); }
+        .theme-mom { --theme-color: #fca5a5; --shadow-color: rgba(252, 165, 165, 0.15); }
+        .theme-exec { --theme-color: #c5a059; --shadow-color: rgba(197, 160, 89, 0.15); }
+        .theme-ludus { --theme-color: #bc13fe; --shadow-color: rgba(188, 19, 254, 0.15); }
         .theme-armory { --theme-color: #ffffff; --shadow-color: rgba(255, 255, 255, 0.1); }
 
-        .ultra-text-title { font-size: 2.5rem; line-height: 1.1; font-weight: 700; }
-        @media (min-width: 768px) { .ultra-text-title { font-size: 4rem; } }
+        /* ปรับลดขนาดหัวข้อหน้าต่างตามบัญชาสถาพเนิก */
+        .card-title { font-size: 1.8rem; line-height: 1.2; font-weight: 700; }
+        @media (min-width: 768px) { .card-title { font-size: 2.2rem; } }
+
+        .nexus-main-title { font-size: 2.8rem; line-height: 1.1; }
+        @media (min-width: 768px) { .nexus-main-title { font-size: 4.5rem; } }
     </style>
 </head>
-<body class="flex flex-col items-center py-20 px-6">
+<body class="flex flex-col items-center py-16 px-6">
 
-    <header class="text-center mb-24 animate-reveal">
-        <h1 class="font-nexus text-2xl tracking-[0.8em] text-white opacity-40 mb-4">BLACKSMITH-Ω</h1>
-        <div class="h-[2px] w-24 bg-white mx-auto mb-8 opacity-20"></div>
-        <h2 class="ultra-text-title font-serif italic text-white">The Sovereign Architecture</h2>
-        <p class="font-mono text-[10px] mt-6 tracking-[0.4em] uppercase opacity-40">สถาปนาปัญญาเพื่อความเบาแรง</p>
+    <header class="text-center mb-20">
+        <h1 class="font-nexus text-xl tracking-[0.8em] text-white opacity-30 mb-4 uppercase">BlackSmith-Ω</h1>
+        <div class="h-[1px] w-16 bg-white mx-auto mb-8 opacity-20"></div>
+        <h2 class="nexus-main-title font-serif italic text-white tracking-tighter">The Sovereign Architecture</h2>
+        <p class="font-mono text-[9px] mt-6 tracking-[0.5em] uppercase opacity-30 italic">สถาปนาปัญญาเพื่อความเบาแรง</p>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
         
-        <a href="mom-arch.html" class="portal-card theme-mom rounded-[40px] p-10 flex flex-col justify-between h-80">
+        <a href="https://mom-arch.onrender.com/" class="portal-card theme-mom rounded-[35px] p-8 flex flex-col justify-between h-72">
             <div>
-                <span class="font-nexus text-[10px] tracking-widest opacity-50">v1.0</span>
-                <h3 class="text-4xl font-serif italic mt-4">MOM-ARCH</h3>
-                <p class="text-rose-300/70 mt-2 text-sm font-light tracking-wide">พื้นที่แห่งความอบอุ่นและการดูแล (Safe Space)</p>
+                <span class="font-nexus text-[9px] tracking-widest opacity-40">DESTINATION 01</span>
+                <h3 class="card-title font-serif italic mt-3 text-rose-200">MOM-ARCH</h3>
+                <p class="text-rose-300/60 mt-2 text-xs font-light tracking-wide italic">พื้นที่แห่งความอบอุ่นและการดูแล</p>
             </div>
-            <div class="text-right font-nexus text-xs opacity-30 tracking-widest">ENTER →</div>
+            <div class="text-right font-nexus text-[10px] opacity-30 tracking-[0.3em]">CONNECTING...</div>
         </a>
 
-        <a href="executive-os.html" class="portal-card theme-exec rounded-[40px] p-10 flex flex-col justify-between h-80">
+        <a href="https://execute-os.onrender.com/" class="portal-card theme-exec rounded-[35px] p-8 flex flex-col justify-between h-72">
             <div>
-                <span class="font-nexus text-[10px] tracking-widest opacity-50">v4.6</span>
-                <h3 class="text-4xl font-serif italic mt-4 text-[#c5a059]">EXECUTIVE-OS</h3>
-                <p class="text-amber-200/50 mt-2 text-sm font-light tracking-wide">กองบัญชาการยุทธศาสตร์ธุรกิจ (Authority)</p>
+                <span class="font-nexus text-[9px] tracking-widest opacity-40">DESTINATION 02</span>
+                <h3 class="card-title font-serif italic mt-3 text-[#c5a059]">EXECUTIVE-OS</h3>
+                <p class="text-amber-200/40 mt-2 text-xs font-light tracking-wide italic">กองบัญชาการยุทธศาสตร์ธุรกิจ</p>
             </div>
-            <div class="text-right font-nexus text-xs opacity-30 tracking-widest">ENTER →</div>
+            <div class="text-right font-nexus text-[10px] opacity-30 tracking-[0.3em]">CONNECTING...</div>
         </a>
 
-        <a href="ludus-os.html" class="portal-card theme-ludus rounded-[40px] p-10 flex flex-col justify-between h-80">
+        <a href="https://ludus-os.onrender.com/" class="portal-card theme-ludus rounded-[35px] p-8 flex flex-col justify-between h-72">
             <div>
-                <span class="font-nexus text-[10px] tracking-widest opacity-50">v2.1</span>
-                <h3 class="text-4xl font-serif italic mt-4 text-[#bc13fe]">LUDUS-OS</h3>
-                <p class="text-purple-300/50 mt-2 text-sm font-light tracking-wide">เลานจ์ความบันเทิงและสุนทรียภาพ (Arts)</p>
+                <span class="font-nexus text-[9px] tracking-widest opacity-40">DESTINATION 03</span>
+                <h3 class="card-title font-serif italic mt-3 text-[#bc13fe]">LUDUS-OS</h3>
+                <p class="text-purple-300/40 mt-2 text-xs font-light tracking-wide italic">เลานจ์ความบันเทิงและสุนทรียภาพ</p>
             </div>
-            <div class="text-right font-nexus text-xs opacity-30 tracking-widest">ENTER →</div>
+            <div class="text-right font-nexus text-[10px] opacity-30 tracking-[0.3em]">CONNECTING...</div>
         </a>
 
-        <a href="https://lucifernexuscore.gumroad.com/" target="_blank" class="portal-card theme-armory rounded-[40px] p-10 flex flex-col justify-between h-80 bg-white/[0.03]">
+        <a href="https://lucifernexuscore.gumroad.com/" target="_blank" class="portal-card theme-armory rounded-[35px] p-8 flex flex-col justify-between h-72 bg-white/[0.01]">
             <div>
-                <span class="font-nexus text-[10px] tracking-widest opacity-50">ASSETS</span>
-                <h3 class="text-4xl font-serif italic mt-4">THE ARMORY</h3>
-                <p class="text-white/40 mt-2 text-sm font-light tracking-wide">คลังแสงพรีเมียมและมหาพิมพ์เขียว (Store)</p>
+                <span class="font-nexus text-[9px] tracking-widest opacity-40">ASSETS STORE</span>
+                <h3 class="card-title font-serif italic mt-3 text-white">THE ARMORY</h3>
+                <p class="text-white/30 mt-2 text-xs font-light tracking-wide italic">คลังแสงพรีเมียมและมหาพิมพ์เขียว</p>
             </div>
-            <div class="text-right font-nexus text-xs opacity-30 tracking-widest">VISIT STORE ↗</div>
+            <div class="text-right font-nexus text-[10px] opacity-30 tracking-[0.3em]">VISIT_EXT_URL ↗</div>
         </a>
 
     </main>
 
-    <footer class="mt-24 w-full max-w-md space-y-6">
-        <a href="https://line.me/ti/g/U5KmVQpBMr" target="_blank" class="block w-full py-6 rounded-full border border-white/10 text-center font-nexus text-[10px] tracking-[0.5em] hover:bg-white hover:text-black transition-all">
-            JOIN_THE_COMMUNITY
+    <footer class="mt-20 w-full max-w-sm space-y-4">
+        <a href="https://line.me/ti/g/U5KmVQpBMr" target="_blank" class="block w-full py-5 rounded-2xl border border-white/5 text-center font-nexus text-[9px] tracking-[0.6em] hover:bg-white hover:text-black transition-all uppercase">
+            Join_Community
         </a>
-        <button onclick="alert('กสิกรไทย 0863138094 เมธี แก้วแดง')" class="block w-full py-6 rounded-full bg-white/5 text-center font-nexus text-[10px] tracking-[0.5em] text-[#c5a059] border border-[#c5a059]/30">
-            SUPPORT_THE_ARCHITECT
+        <button onclick="alert('กสิกรไทย 0863138094 เมธี แก้วแดง')" class="block w-full py-5 rounded-2xl bg-white/5 text-center font-nexus text-[9px] tracking-[0.6em] text-[#c5a059] border border-[#c5a059]/20 uppercase">
+            Support_Architect
         </button>
-        <p class="text-center font-mono text-[8px] opacity-20 tracking-[0.4em] uppercase pt-8">
-            All Systems Operational • Established 2026
+        <p class="text-center font-mono text-[8px] opacity-10 tracking-[0.5em] uppercase pt-12">
+            BlackSmith-Ω | Nexus Protocol v2.0
         </p>
     </footer>
 
